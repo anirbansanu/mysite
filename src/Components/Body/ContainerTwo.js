@@ -1,14 +1,14 @@
 import React from 'react';
-import Web from "../../assets/Imgs/web.png";
+import Web from "../../assets/Imgs/web.svg";
 
 
-export const ContainerTwo = ()=>{
+const ContainerTwo = ()=>{
     return(
         <div className="container-fluid ">
             <div className="row border-primary ">
                 <div className="col-12 text-center"><h1 className="text-white">What I Do?</h1></div>
                 <div className="col-md-6 border-success p-0 overflow-hidden">
-                    <img className="d-block w-100 vh-85" src={Web} alt="Carousel Block" 
+                    <img className="web" src={Web} alt="Carousel Block" 
                         data-aos="fade-right"
                         data-aos-anchor-placement="top-bottom"
                         data-aos-easing="ease-in-back"
@@ -40,3 +40,4 @@ export const ContainerTwo = ()=>{
         </div>
     )
 }
+export default ContainerTwo;

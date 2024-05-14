@@ -1,11 +1,10 @@
 import './style.css';
-import { Header } from "./Components/Header/Header";
-import { Footer } from "./Components/Footer/Footer";
-import { ContainerOne } from "./Components/Body/ContainerOne";
-import { ContainerTwo } from "./Components/Body/ContainerTwo";
-import { ContainerThree } from "./Components/Body/ContainerThree";
-import { Contact } from './Components/Body/ContactContainer';
-import { Resume } from './Components/Body/ResumeContainer';
+import { Header } from "./Layout/Header/Header";
+import { Footer } from "./Layout/Footer/Footer";
+import Home from './Pages/Home';
+import AllProjects from './Pages/AllProjects';
+import Resume from './Pages/Resume';
+import NotFound from './Pages/NotFound';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import AOS from "aos";
@@ -24,10 +23,9 @@ function App() {
       <div className="App" id="app">
       <Header title="My Web" searchBar={false} /> {/* You can pass props to Header here */}
         <Routes>
-          <Route path="/my-web" element={<MyWeb />} />
-          <Route path="/my-web/contact" element={<Contact />} />
-          <Route path="/my-web/allprojects" element={<AllProjects />} />
-          <Route path="/my-web/resume" element={<ResumeComponent />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/all-projects" element={<AllProjects />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
@@ -36,34 +34,5 @@ function App() {
   );
 }
 
-function MyWeb() {
-  return (
-    <>
-      <ContainerOne />
-      <ContainerTwo />
-      <Resume tittle="Project" />
-      <ContainerThree tittle="Project" />
-    </>
-  );
-}
-
-function AllProjects() {
-  return <ContainerThree tittle="Project" />;
-}
-
-function ResumeComponent() {
-  return <Resume tittle="Resume1" />;
-}
-
-function NotFound() {
-  return (
-    <>
-      <ContainerOne />
-      <ContainerTwo />
-      <Resume tittle="Project" />
-      <ContainerThree />
-    </>
-  );
-}
 
 export default App;

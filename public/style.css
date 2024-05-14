@@ -8,6 +8,10 @@ body
     font-family: 'IBM Plex Mono';
     background-color: rgb(0, 0, 0);
 }
+.vh-75
+{
+    min-height: 75vh;
+}
 .vh-85
 {
     min-height: 85vh;
@@ -15,6 +19,9 @@ body
 .vh-90
 {
     min-height: 90vh;
+}
+.w-90{
+    width: 90%;
 }
 .d-cl
 {
@@ -55,6 +62,11 @@ body
 .bg-t-pink
 {
     background-color:rgba(231, 38, 231, 0.151);
+}
+.web{
+    width: 90%;
+    margin-top: 70px;
+    padding :20px;
 }
 /* X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap*/

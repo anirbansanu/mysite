@@ -1,5 +1,5 @@
 import { ResumeSvg } from "./StrokeItem"
-export const Resume = ()=>{
+ const Resume = ()=>{
     return(
         <div id="resume" className="resume p-2 mt-5 text-white mb-5">
             <div className="container" data-aos="fade-up">
@@ -83,3 +83,5 @@ export const Resume = ()=>{
         </div>
     )
 }
+
+export default Resume;

@@ -1,31 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ProjectCardItem } from './ProjectCardItem';
-// import reactproject from "../../assets/iconImgs/reactproject.png";
-// import htmlcssjavascript from "../../assets/iconImgs/htmlcssjavascript.png";
-// import htmlcssjsphp from "../../assets/iconImgs/htmlcssjsphpmdb.png";
-import {data} from '../../services/ProjectData';
+
+import getAllData from '../../services/ProjectData';
 
 
-
-export const WebTab = (props)=>{
-    return(
-            <div className="row justify-content-center ">
-                
-                {
-                        data.map((d,i)=>(
-                            d.type.find(t=> t==="web")?
-                            <div className="col-md-6 col-lg-4 p-3" key={i}>
-                                <ProjectCardItem 
-                                    imgUrl={d.imgPath} tittle={d.tittle} 
-                                    badges={d.badges} 
-                                    projectLink={d.projectLink} 
-                                    githubLink={d.githubLink} 
-                                    desc={d.desc}
-                                />
-                            </div>:""
-                        ))
-                    }
-                
-            </div>
-    )
-}
+const WebTab = (props) => {
+    const [webProjects, setWebProjects] = useState([]);
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const projects = await getAllData();
+          const webProjectsFiltered = projects.filter(project =>
+            project.type.includes('web')
+          );
+          setWebProjects(webProjectsFiltered);
+        } catch (error) {
+          console.error('Error fetching projects:', error);
+        }
+      };
+  
+      fetchData();
+    }, []);
+  
+    return (
+      <div className="row justify-content-center">
+        {webProjects.map((project, index) => (
+          <div className="col-md-6 col-lg-4 p-3" key={index}>
+            <ProjectCardItem
+              imgUrl={project.imgPath}
+              tittle={project.tittle}
+              badges={project.badges}
+              projectLink={project.projectLink}
+              githubLink={project.githubLink}
+              desc={project.desc}
+            />
+          </div>
+        ))}
+      </div>
+    );
+  };
+  
+export default WebTab;

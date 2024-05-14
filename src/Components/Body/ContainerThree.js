@@ -2,11 +2,11 @@ import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { AllProjects } from './AllProjects';
 import { ProgrammingTab } from './ProgrammingTab';
-import { WebTab } from './WebTab';
+import WebTab from './WebTab';
 import { ScriptingTab } from './ScriptingTab';
 import { ProjectSvg } from './StrokeItem';
 
-export const ContainerThree = () => {
+const ContainerThree = () => {
     return (
         <div className="card bg-transparent text-center overflow-hidden" data-aos="fade-up">
             <div className="card-title">
@@ -47,4 +47,4 @@ export const ContainerThree = () => {
     );
 }
 
-
+export default ContainerThree;

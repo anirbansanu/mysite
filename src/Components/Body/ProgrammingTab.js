@@ -1,10 +1,6 @@
 import React from 'react';
 import { ProjectCardItem } from './ProjectCardItem';
-import {getAllData} from '../../services/ProjectData';
-
-// import cpp from "../../assets/iconImgs/cppdatabase.gif";
-// import arduino from "../../assets/iconImgs/arduino.gif";
-// import esp8266 from "../../assets/iconImgs/8266.gif";
+import getAllData from '../../services/ProjectData';
 
 export class ProgrammingTab extends React.Component {
     constructor(props){

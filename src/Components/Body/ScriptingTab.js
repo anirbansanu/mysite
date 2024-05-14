@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProjectCardItem } from './ProjectCardItem';
-import {getAllData} from '../../services/ProjectData';
+import getAllData from '../../services/ProjectData';
 
 // import hacking from "../../assets/iconImgs/hacking.gif";
 // import allinone from "../../assets/iconImgs/htmlcssjavascript.png";
