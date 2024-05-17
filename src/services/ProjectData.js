@@ -2,7 +2,7 @@ import axios from 'axios';
 
  const getAllData = async (pageNumber, itemsPerPage) => {
     try {
-      const response = await axios.get('http://myweb.my-style.in/public/api/projects', {
+      const response = await axios.get('http://127.0.0.1:8000/api/projects', {
         
         params: {
           page: pageNumber,

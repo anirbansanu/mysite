@@ -2,7 +2,7 @@ import React from 'react';
 
 //import gif2 from "../../assets/Imgs/1.jpg";
 
-import WebDevPerson from "../../assets/Imgs/dev-per.svg";
+import WebDevPerson from "../../assets/Imgs/banner.svg";
 
 const ContainerOne = ()=>{
     
@@ -28,8 +28,8 @@ const ContainerOne = ()=>{
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6  border-dark pt-0 p-3 overflow-hidden">
-                    <img className="web" src={WebDevPerson} alt="Carousel Block" data-aos="fade-left" />
+                <div className="col-md-6 d-flex justify-content-center border-dark p-4 overflow-hidden">
+                    <img className="banner1" src={WebDevPerson} alt="Carousel Block" data-aos="fade-left" />
                 </div>
                 
             </div>

@@ -1,26 +1,31 @@
 import React from 'react';
-import Web from "../../assets/Imgs/web.svg";
+import Web from "../../assets/Imgs/webdev.svg";
 
 
 const ContainerTwo = ()=>{
     return(
         <div className="container-fluid ">
             <div className="row border-primary ">
-                <div className="col-12 text-center"><h1 className="text-white">What I Do?</h1></div>
-                <div className="col-md-6 border-success p-0 overflow-hidden">
+                <div className="col-12 text-center my-5">
+                    <h1 className="text-white">What I Do?</h1>
+                    </div>
+                <div className="col-md-6 border-success d-flex justify-content-center p-4 overflow-hidden">
                     <img className="web" src={Web} alt="Carousel Block" 
                         data-aos="fade-right"
                         data-aos-anchor-placement="top-bottom"
                         data-aos-easing="ease-in-back"
                         data-aos-delay="100"/>
+                        
                 </div>
-                <div className="col-md-6  p-0 overflow-hidden">
+                <div className="col-md-6 overflow-hidden">
                     <div className="card d-cl text-white mb-3 bg-transparent" 
                         data-aos="fade-left"
                         data-aos-anchor-placement="top-bottom"
                         data-aos-easing="ease-in-back"
                         data-aos-delay="100">
-                        <div className="card-header text-center text-primary"><h1>Web Development</h1></div>
+                        <div className="card-header my-4 text-center text-primary">
+                            <h1>Web Development</h1>
+                        </div>
                         <div className="card-body">
                             <div className="card-title p-2">
                                 
