@@ -3,7 +3,7 @@ import React from 'react';
 //import gif2 from "../../assets/Imgs/1.jpg";
 
 import WebDevPerson from "../../assets/Imgs/banner.svg";
-
+import NamasteSvg from './NamasteSvg';
 const ContainerOne = ()=>{
     
     return(
@@ -12,7 +12,9 @@ const ContainerOne = ()=>{
             <div className="row border-danger" >
                 <div className="col-md-6 border-success p-5 text-start overflow-hidden">
                     <div className="container-fluid p-4 text-white " data-aos="fade-right">
-                    <h1 className="display-1 text-warning"><b>Namaste!</b></h1>
+                        <h1 className="display-1 text-warning">
+                            <NamasteSvg width={400} height={100} fill="gold" />
+                        </h1>
                         <h1 className="display-1"><strong>I'm</strong></h1>
                         <h1 className=" display-4 p-1">
                             <span className="badge border border-success p-2">
